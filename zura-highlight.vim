@@ -3,7 +3,7 @@
 " Define Zura keywords
 syn keyword zuraKeyword const fn have auto loop if else return enum struct typename template
 syn keyword zuraType int float bool str char
-syn keyword zuraBuiltIn @dis @cast @input @import @extern @call
+syn match zuraBuiltIn /@\w\+/
 syn keyword zuraConditional if else
 syn keyword zuraLoop loop
 syn keyword zuraStatement return
@@ -30,9 +30,9 @@ syn match zuraOperator /[:=(){}\[\],;.+\-*/<>]/
 syn match zuraVariable /\<[a-zA-Z_]\w*\>/ contains=zuraKeyword,zuraType
 
 " Custom colors for Zura syntax (Horizon-style palette)
-hi def zuraKeyword guifg=#E95678 gui=bold                " Keywords: Warm pink
-hi def zuraType guifg=#25B0BC gui=italic                 " Types: Vibrant cyan
-hi def zuraBuiltIn guifg=#FAB795 gui=bold,italic         " Built-ins: Peachy orange
+hi def zuraKeyword guifg=#E95678 gui=bold               " Keywords: Warm pink
+hi def zuraType guifg=#25B0BC gui=italic                " Types: Vibrant cyan
+hi def zuraBuiltIn guifg=#FAB795 gui=bold,italic        " Built-ins: Peachy orange
 hi def zuraConditional guifg=#FAB28E gui=bold           " Conditionals: Muted orange
 hi def zuraLoop guifg=#FAB28E gui=bold                  " Loops: Muted orange
 hi def zuraStatement guifg=#FFD580 gui=italic           " Statements: Light peach
@@ -44,3 +44,5 @@ hi def zuraOperator guifg=#E95678                       " Operators: Warm pink
 hi def zuraStruct guifg=#25B0BC gui=bold                " Structs: Vibrant cyan
 hi def zuraFunction guifg=#FFD580 gui=bold              " Functions: Light peach
 hi def zuraVariable guifg=#FAB                          " Variables: light pink
+
+
