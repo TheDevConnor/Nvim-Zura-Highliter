@@ -3,6 +3,7 @@
 (case_keyword) @keyword
 (enum_keyword) @keyword
 (break_keyword) @keyword
+(continue_keyword) @keyword
 (default_keyword) @keyword
 (match_keyword) @keyword
 (else_keyword) @keyword
@@ -46,9 +47,12 @@
 (pree_ops) @operator
 (arrow_point) @operator
 (and) @operator
+
 (number) @number
 (comment) @comment
-(identifier) @module
+
+
+(identifier) @property
 (identifier_c) @constant 
 (identifier_sp) @property
 (identifier_t) @type

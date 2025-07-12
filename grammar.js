@@ -50,6 +50,7 @@ module.exports = grammar({
       $.import_, 
       $.loop_cond,
       seq($.break_keyword, $.semi),
+      seq($.continue_keyword, $.semi),
     ),
 
     expression: $ => choice(
@@ -89,6 +90,7 @@ module.exports = grammar({
     case_keyword: $ => token("case"),
     enum_keyword: $ => token("enum"),
     break_keyword: $ => token("break"),
+    continue_keyword: $ => token("continue"),
     default_keyword: $ => token("default"),
     match_keyword: $ => token("match"),
     struct_keyword: $ => token("struct"),
@@ -293,13 +295,14 @@ module.exports = grammar({
     )),
 
     struct_arg: $ => prec.left(seq(
-      $.identifier_sp,
       choice(
         seq(
+          $.identifier_fn,
           $.walrus_op,
           $.struct_fn,
         ),
         seq(
+          $.identifier_sp,
           $.colon,
           $.type,
           optional($.comma)
