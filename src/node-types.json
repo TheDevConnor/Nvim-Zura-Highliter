@@ -1267,6 +1267,10 @@
           "named": true
         },
         {
+          "type": "continue_keyword",
+          "named": true
+        },
+        {
           "type": "else_statement",
           "named": true
         },
@@ -1715,6 +1719,10 @@
   },
   {
     "type": "const_keyword",
+    "named": true
+  },
+  {
+    "type": "continue_keyword",
     "named": true
   },
   {

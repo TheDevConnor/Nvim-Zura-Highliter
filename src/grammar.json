@@ -124,6 +124,19 @@
               "name": "semi"
             }
           ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "continue_keyword"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "semi"
+            }
+          ]
         }
       ]
     },
@@ -272,6 +285,13 @@
       "content": {
         "type": "STRING",
         "value": "break"
+      }
+    },
+    "continue_keyword": {
+      "type": "TOKEN",
+      "content": {
+        "type": "STRING",
+        "value": "continue"
       }
     },
     "default_keyword": {
